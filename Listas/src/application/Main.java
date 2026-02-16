@@ -52,7 +52,7 @@ public class Main {
 			
 		}
 		System.out.println("--------------------------------");
-		String name = list.stream().filter(List -> List.charAt(0) == 'J').findFirst().orElse(null);
+		String name = list.stream().filter(List -> List.charAt(0) == 'B').findFirst().orElse(null);
 		System.out.println(name);
 	}
 
