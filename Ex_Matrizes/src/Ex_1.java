@@ -7,24 +7,23 @@ public class Ex_1 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Digite a quantidade de números da matriz: ");
+		System.out.print("Digite a quantidade de números da matriz: ");
 		int n = sc.nextInt();
 		
 		int[][] mat = new int[n][n];
 		//inicio da logica para solicitar a matriz
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++) {
+		for(int i = 0; i < mat.length; i++){
+			for(int j = 0; j < mat[i].length; j++) {
 				
 				mat[i][j] = sc.nextInt();
 				
 			}
-			System.out.println();
 		}
 		//fim da logica de solicitacao
 		
 		//inicio da exibicao da matriz
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++) {
+		for(int i = 0; i < mat.length; i++){
+			for(int j = 0; j < mat[i].length; j++) {
 				
 				System.out.print(" " + mat[i][j]);
 				
@@ -35,9 +34,9 @@ public class Ex_1 {
 		
 		int t = 0;
 		
-		System.out.println("Números negativos: ");
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++) {
+		System.out.print("Números negativos: ");
+		for(int i = 0; i < mat.length; i++){
+			for(int j = 0; j < mat[i].length; j++) {
 				
 				if(mat[i][j] < 0) {
 					t = t += 1;
@@ -46,13 +45,10 @@ public class Ex_1 {
 				}
 				
 			}
-			System.out.print(" ");
+			System.out.println(" ");
 		}
-		System.out.print("Diagonal principal: ");
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++) {
-				
-			}
+		System.out.println("Diagonal principal: ");
+		for(int i = 0; i < mat.length; i++){
 			System.out.print(" " + mat[i][i]);
 		}
 		System.out.println();
